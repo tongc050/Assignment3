@@ -1,0 +1,249 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+nav{
+    height: 90px;
+    background: #ebdbcd;
+}
+
+.logo{
+    color: #f9f6f1;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 22px;  
+    text-transform: uppercase;  
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+nav ul{
+    /* float: right; */
+    margin-right: 25px;
+    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+    padding-top: 30px;
+}
+nav ul li a{
+    position: relative;
+    color: #f9f6f1; 
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0; 
+    height: 3px;
+    width: 100%;
+    background: #f9f6f1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s linear;
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+label #btn, label #exit{
+    color: #f9f6f1;
+    font-size: 30px;
+    float: right; 
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media(max-width: 1118px){
+    .logo{
+        left: 8%;
+    }
+
+}
+@media (max-width: 944px){
+    .logo{
+        left: 6%;
+        top: 10px;
+        width: 130px;
+        
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+}
+@media(max-width: 860px){
+
+    label #btn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh; 
+        background: #ebdbcd;
+        top: 80px;
+        left: -100%; 
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #exit{
+        display: block;
+    }
+    
+}
+@media screen and (min-width: 700px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 5px;  
+        margin: 0 auto; 
+        }
+    }
+
+/* header */
+.container > *{
+    padding: 30px;
+}
+section{
+    background-color:#f9f6f1 ;
+    font-weight: bold;
+    font-size: 26px;
+    color: #e1c2b7;
+    height: 320px;
+    text-align: center;
+    grid-column: 1/7;
+
+}
+section p{
+    padding: 10px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+img{
+    max-width: 100%;
+    height: 200px;
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.nested{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding-top: 30px;
+}
+.nested p{
+    border: 2px solid #e8dbcd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0;
+    font-size: 18px;
+}
+.educ{
+    background-color: #faf0ea;
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 2;
+    color: #e1c2b7;
+}
+.volun{
+    background-color: #f5eee8;
+    grid-column: 5/6;
+    grid-row: 2;
+    color: #bc9e82;
+    text-align: center;
+}
+.volun p{
+    padding-top: 30px;
+}
+.volun img{
+    padding-top: 60px;
+}
+.proj{
+    background-color:#f5eadf;
+    grid-row: 2;    
+    color: #ca9e7b;
+}
+.courses{
+    background-color:  #e8dbcd;
+    grid-column:1/7;
+    color: #98694f;
+}
+.nested-one{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    grid-gap: 10px;
+    border: 2px solid #98694f;
+    padding: 10px;
+}
+.nested-one h4{
+    color: #98694f;
+}
+.hobby{
+    background-color: #be9485;
+    color: #6c513e;
+    grid-column: 1/7;
+}
+.hobby-img{
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    border: 1px solid black;
+
+}
+.zoom {
+    margin-left: 30px;
+    height: 230px; 
+  }
+
+.zoom img {
+    transition: transform .5s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .zoom:hover img {
+    transform: scale(1.3);
+  }
+footer{
+    grid-column: 1/7;
+    background-color: #5e3f32;
+    color: white;
+    
+    
+}
+
